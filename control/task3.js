@@ -1,11 +1,9 @@
-let num1 = prompt("num1")
-let num2 = prompt("num2")
-if (num1 > num2) {
-    alert(num1+"is largest")
+for (let a = 0; a < 10; a++) {
+    if (a % 3 == 0)
+        console.log(a)
 }
-else if (num1 < num2) {
-    alert(num2+" is largest")
-}
-else {
-    alert("num1==num2")
+
+for (let b = 0; b < 10; b++) {
+    if (b % 5 == 0)
+        console.log(b)
 }
