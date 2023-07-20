@@ -8,3 +8,18 @@ function checkInRange(a) {
     }
 }
 checkInRange(a)
+
+/// method 2
+
+function checkInRange(a) {
+    var a =prompt("Enter a Number ")
+    for (a;a<=50;a++){
+    if (a >= 20 && a <= 40) {
+        console.log(a," Between")
+    }
+    else {
+        console.log(a," Outside")
+    }
+}
+}
+checkInRange()
