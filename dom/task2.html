@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        let a = document.createElement("h3")
+        document.body.appendChild(a)
+
+        a.textContent = "ADD TO CART"
+
+        let b = document.createElement("input")
+        b.setAttribute("id", "cartItem")
+        document.body.appendChild(b)
+
+        let form=document.createElement("form")
+        document.body.appendChild(form)
+
+        let c = document.createElement("input")
+        c.setAttribute("type", "reset")
+        c.setAttribute("value", "ADD")
+        c.setAttribute("id", "addBtn")
+        c.setAttribute("onclick", "change()")
+        form.appendChild(c)
+
+        let d = document.createElement("h4")
+        document.body.appendChild(d)
+
+        d.textContent = "My Cart Items"
+
+        let e = document.createElement("ul")
+        e.setAttribute("id", "ul")
+        document.body.appendChild(e)
+
+        function change() {
+
+            let name = document.getElementById("cartItem")
+            let ab=name.value
+            let ulEl = document.getElementById("ul")
+            let liEl = document.createElement("li")
+            liEl.setAttribute("class", "list")
+            ulEl.appendChild(liEl)
+            for (let i = 0; i < ab.length; i++) {
+               liEl.textContent = ab
+            }          name.value="";
+        }
+    </script>
+</body>
+
+</html>
