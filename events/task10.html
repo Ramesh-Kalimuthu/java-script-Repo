@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Name:<input type="text" id="input">
+    Enter Pass: <input type="password" id="pass">
+    <input type="submit" id="button" onclick="changeEvent()">
+    <select name="select" id="select" onclick="sel()"></select>
+    <script>
+        let a = document.getElementById("input")
+        let b = document.getElementById("button")
+        let c = document.getElementById("select")
+        let d = document.getElementById("pass")
+
+
+        function changeEvent() {
+            let inputval = a.value
+
+
+            if (inputval == "") {
+                alert("please enter a text ")
+            }
+            else {
+                let optionEl = document.createElement("option")
+                c.appendChild(optionEl)
+                optionEl.textContent = inputval
+                a.value = ""
+                d.value = ""
+                console.log("Successfull")
+
+            }
+
+        }
+        function sel() {
+            a.value = c.value
+        }
+        d.addEventListener("keydown", (event) => {
+            if (event.keyCode === 13) {
+                changeEvent()
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

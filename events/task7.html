@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <label for="">Enter A Number:</label><input type="number" id="int">
+    <input type="button" id="btn" value="Submit">
+    </form>
+    <select id="sel"></select>
+    <script>
+        let a=document.getElementById("btn")
+        let b=document.getElementById("sel")
+        let c=document.getElementById("int")
+
+        a.addEventListener('click',() =>{
+            let d=c.value
+            if(d){
+                let e=document.createElement("option")
+                //e.value=d
+                e.textContent=d
+                b.appendChild(e)
+                c.value=""
+            }
+            else if(d=="") {
+                alert("enter number")
+            }
+        })
+    </script>
+</body>
+</html>

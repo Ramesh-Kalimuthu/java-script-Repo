@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="input">
+    <input type="submit" id="button" onclick="changeEvent()">
+    <select name="select" id="select"></select>
+    <script>
+        let a = document.getElementById("input")
+        let b = document.getElementById("button")
+        let c = document.getElementById("select")
+
+
+        function changeEvent() {
+            let inputval = a.value
+
+
+            if (inputval == "") {
+                alert("please enter a number")
+            }
+            else {
+                let optionEl = document.createElement("option")
+                c.appendChild(optionEl)
+                optionEl.textContent = inputval
+                a.value = ""
+                console.log("Successfully")
+            }
+
+        }
+        a.addEventListener("keydown", (event) => {
+            if (event.keyCode === 13) {
+                changeEvent()
+            }
+        })
+    </script>
+</body>
+
+</html>
