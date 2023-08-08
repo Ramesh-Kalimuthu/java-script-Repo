@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Date:<input type="date" id="date">
+    <input type="submit" id="but" value="change" onclick="change()">
+    Minus Date: <input type="text" id="text">
+    Plus Date: <input type="text" id="ptext">
+
+    <script>
+        
+        
+         function change(){
+            let date=document.getElementById("date").value
+            if(date){
+                let dateNew=new Date(date)
+
+                let min=new Date(dateNew)
+                min.setDate(dateNew.getDate()-5)
+                
+                let plus=new Date(dateNew)
+                plus.setDate(dateNew.getDate()+5)
+                
+                document.getElementById("ptext").value=plus.toISOString().split("T")[0]
+                document.getElementById("text").value=min.toISOString().split("T")[0]
+            }
+         }
+    </script>
+</body>
+</html>
