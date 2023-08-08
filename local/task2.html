@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+
+        let a={
+            name:"ramesh",
+            age:20,
+            course:"web"
+        }
+        console.log(a)
+
+        let b=JSON.stringify(a)
+        console.log(b)
+
+        let c=JSON.parse(b)
+        console.log(c)
+
+        localStorage.setItem("Details",b)
+
+        let d=localStorage.getItem("Details")
+        let e=JSON.parse(d)
+
+        console.log(e.name)
+
+        document.getElementById("p").textContent=e.name+" "+e.age+" "+e.course
+   
+    </script> 
+</body>
+</html>

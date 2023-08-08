@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Name: <input type="text" id="name"><br>
+    PassWord: <input type="password" id="pass"><br>
+    Email: <input type="text" id="mail"><br>
+    <input type="submit" onclick="submitVal()">
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="para"></p>
+
+    <script>
+
+
+        function submitVal() {
+            let name = document.getElementById("name").value
+            let pass = document.getElementById("pass").value
+            let mail = document.getElementById("mail").value
+            let b=[]
+            let all ={name,pass,mail} 
+            b.push(all)
+            console.log(b)
+
+            let local=localStorage.setItem("details", JSON.stringify(b))
+            
+            let p=localStorage.getItem("details")
+            let a=JSON.parse(p)
+            console.log(a)
+            
+            document.getElementById("p1").textContent="Name :"+a[0].name
+            document.getElementById("p2").textContent="Pass :"+a[0].pass
+            document.getElementById("para").textContent="Mail :"+a[0].mail
+     }
+ 
+    </script>
+</body>
+
+</html>
