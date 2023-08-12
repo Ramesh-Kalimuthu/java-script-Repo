@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let details = [
+
+        ]
+
+        let obj1 = {
+            name: "Ramesh",
+            lastName: "Kalimuthu",
+
+        }
+        let Dob = "20-05-2003"
+        obj1.dob = Dob
+
+        details.push(obj1)
+
+        console.log(details)
+
+        let date = Dob.split("-").join("")
+
+        let name1 = Math.floor(Math.random() * obj1.name.length)
+        let name2 = Math.floor(Math.random() * obj1.lastName.length)
+        let name3 = Math.floor(Math.random() * Dob.length)
+        let name4 = Math.floor(Math.random() * obj1.name.length)
+        let name5 = Math.floor(Math.random() * obj1.lastName.length)
+        let name6 = Math.floor(Math.random() * Dob.length)
+
+        let random_pass1 = obj1.name.charAt(name1) + obj1.lastName.charAt(name2) + name3
+        let random_pass2 = obj1.name.charAt(name4) + obj1.lastName.charAt(name5) + name6
+
+        console.log(random_pass1 + random_pass2)
+    </script>
+</body>
+
+</html>
