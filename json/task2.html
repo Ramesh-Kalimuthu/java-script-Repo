@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul"></ul>
+    <script>
+        fetch("https://fakestoreapi.com/products/")
+            .then(a => a.json())
+            .then(b => {
+                console.log(b)
+                localStorage.setItem("Products", JSON.stringify(b))
+                let c = localStorage.getItem("Products")
+                let d = JSON.parse(c)
+                console.log(d[0].title)
+
+                for(i=0;i<b.length;i++){
+                    let e=document.getElementById("ul")
+                    let f=document.createElement("li")
+                    e.appendChild(f)
+                    f.textContent+=d[i].title
+                }
+
+            })
+
+
+    </script>
+</body>
+
+</html>
