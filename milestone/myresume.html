@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./myresume.css">
+</head>
+
+
+<body>
+
+    <h2 class="text-center">
+        <img src="https://cdn-au.onetrust.com/logos/3dbea99f-abc0-4dbd-bcd7-8f6dfcaea28d/fa31fe00-374f-4fdf-98ff-2a16550795d7/2db09970-a2d9-4d2b-9e0e-5c8a08893ccd/Smartmockups_Logo_Symbol.png"
+            class="logo">Resume Builder
+    </h2>
+
+    <div class="d-flex flex-column justify-content-center align-items-center mainDiv">
+        <form action="">
+            <table>
+                <!--Personal Details-->
+
+                <tr>
+                    <h3>Personal Details</h3>
+                </tr>
+                <tr>
+                    <td>Enter Your Name:</td>
+                    <td><input type="text" id="name" placeholder="Enter Name"></td>
+                </tr>
+                <tr>
+                    <td>Job Role:</td>
+                    <td><input type="text" id="jobRole" placeholder="Enter Your Job Role"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="number" id="mobile" placeholder="Enter Phone number"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="mail" placeholder="Enter Your email-id"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" id="city" placeholder="Enter your city "></td>
+                </tr>
+                <tr>
+                    <td>LinkedIn URL:</td>
+                    <td><input type="text" id="link" placeholder="Enter Linkedin Url "></td>
+                </tr>
+                <tr>
+                    <td>Github URl:</td>
+                    <td><input type="text" id="git" placeholder="Enter Git Url"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Career Objective:</td>
+                    <td><textarea name="" id="Career" cols="25" rows="5" placeholder="Type Here..."></textarea></td>
+                </tr>
+
+                <!--Education-->
+
+                <tr>
+                    <td>
+                        <h3>Education</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Degree:</td>
+                    <td><input type="text" id="degree" placeholder="Enter Your Degree"></td>
+                </tr>
+                <tr>
+                    <td>College:</td>
+                    <td><input type="text" id="college" placeholder="Enter Your College/University"></td>
+                </tr>
+                <tr>
+                    <td>Year:</td>
+                    <td><input type="number" placeholder="Enter Pass Out Year" id="clyear"></td>
+                </tr>
+                <tr>
+                    <td>Percentage:</td>
+                    <td><input type="number" placeholder="Enter percentage" id="clPercent"></td>
+                </tr>
+
+                <tr>
+                    <td>School:</td>
+                    <td><input type="text" id="school" placeholder="Enter school name"> </td>
+                </tr>
+                <tr>
+                    <td>Percentage:</td>
+                    <td><input type="number" placeholder="Enter percentage" id="scPercent"></td>
+                </tr>
+                <tr>
+                    <td>Year:</td>
+                    <td><input type="number" placeholder="Enter Pass Out" id="scyear"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Internships & Projects</h3>
+                    </td>
+                </tr>
+                <!--Internship & Projects-->
+                <tr>
+                    <td>Internship Title</td>
+                    <td><input type="text" name="" placeholder="Enter Title" id="intTitle"></td>
+                </tr>
+                <tr>
+                    <td>Year:</td>
+                    <td><input type="date" placeholder="Enter Year" id="intyear"></td>
+                </tr>
+                <tr>
+                    <td>Project Title</td>
+                    <td><input type="text" placeholder="Enter Title" id="prjTitle"></td>
+                </tr>
+                <tr>
+                    <td>Year:</td>
+                    <td><input type="date" placeholder="Enter Year" id="prjyear"></td>
+                </tr>
+                <!--Experience-->
+
+                <tr>
+                    <td>
+                        <h3>Experience</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Company Name</td>
+                    <td><input type="text" placeholder="Enter name" id="cmpname"></td>
+                </tr>
+                <tr>
+                    <td>Experience in years:</td>
+                    <td><input type="number" placeholder="ex:2  " id="expyears"></td>
+                </tr>
+
+                <!--Certifications-->
+
+                <tr>
+                    <td>
+                        <h3>Certificates</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Certificate name:</td>
+                    <td><input type="text" placeholder="Enter name" id="certificate"></td>
+                </tr>
+                <tr>
+                    <td>Year:</td>
+                    <td><input type="number" placeholder="Enter Year" id="certYear"></td>
+                </tr>
+                <tr>
+                    <td>Organization name:</td>
+                    <td><input type="text" placeholder="Ex:Google" id="orgname"></td>
+                </tr>
+
+                <!--Skills-->
+                <div id="skills">
+                    <div class="skillsfield">
+                        <tr>
+                            <td>
+                                <h3>Skills</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Enter Your Skills</td>
+                            <td><input type="text" placeholder="Ex:ReactJs" id="skillname"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Your Skills</td>
+                            <td><input type="text" placeholder="Ex:ReactJs" id="skillname2"></td>
+                        </tr>
+                    </div>
+                </div>
+
+
+
+                <!--Languages-->
+
+                <tr>
+                    <td>
+                        <h3>Language</h3>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Language1:</td>
+                    <td><input type="text" placeholder="ex:English" id="lng1"></td>
+                </tr>
+                <tr>
+                    <td>Language2:</td>
+                    <td><input type="text" id="lng2" placeholder="ex:Tamil"></td>
+                </tr>
+
+            </table>
+        </form>
+        <input type="submit" class="mt-3 but" style="width: 100px;" onclick="submitVal()">
+
+    </div>
+
+
+
+    <script src="./myresume.js"></script>
+</body>
+
+</html>

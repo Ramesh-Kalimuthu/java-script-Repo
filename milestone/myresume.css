@@ -1,0 +1,26 @@
+body {
+    background-image: linear-gradient(to left, #42275a, #734b6d);
+
+}
+
+.add-button {
+    display: inline-block;
+    margin-top: 5px;
+    height: 30px;
+    width: 80px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+input {
+    border-radius: 5px;
+    height: 35px;
+    width: 200px;
+
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=REM&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kanit&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+    font-family: 'REM', sans-serif;
+}
+
+.head {
+    height: 60px;
+    background-color: #224056;
+}
+
+.top {
+    color: #224056;
+}
+
+h4 {
+    color: #224056;
+}
+
+.name {
+    font-family: 'Bree Serif', serif;
+    font-family: 'Kanit', sans-serif;
+    /* font-size: 20px; */
+}
+
+#role {
+    text-decoration: underline;
+}

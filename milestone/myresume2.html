@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./myresume2.css">
+</head>
+
+<body>
+    <div class="head"></div>
+    <div>
+        <div class=" text-center top">
+            <h1 id="name"></h1>
+            <h2 id="role"></h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h4>Contact:</h4>
+            <ul class="li">
+                <li id="mobile"></li>
+                <li id="email"></li>
+                <li id="city"></li>
+                <li id="linked"></li>
+                <li id="git"></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h4>Education</h4>
+            <h5 id="degree"></h5>
+            <p id="college"></p>
+            <span id="collegeyear"></span>
+            <span id="collegepercent"></span>
+            <h6>HSC</h6>
+            <p id="schoolname"></p>
+            <span id="schoolyear"></span>
+            <span id="schoolpercent"></span>
+
+        </div>
+        <div class="col-6">
+            <h4>Caree objective</h4>
+            <p id="career"></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h4>Internship & Projects:</h4>
+            <h5>Internships:</h5>
+            <p id="inttitle"></p>
+            <span id="intyear"></span>
+            <h5>Projects</h5>
+            <p id="project"></p>
+            <span id="projectyr"></span>
+        </div>
+
+        <div class="col-6">
+            <h4>Skills</h4>
+            <ul>
+                <li id="skill1"></li>
+                <li id="skill2"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+
+            <h4>Work & Experience</h4>
+            <p id="work"></p>
+            <p id="exp"></p>
+        </div>
+        <div class="col-6">
+            <h4>Certifications:</h4>
+            <p id="certname"></p>
+            <span id="certyear"></span>
+            <p id="orgname"></p>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h4>Languages Known</h4>
+            <ul>
+                <li id="lng1"></li>
+                <li id="lng2"></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <button type="button" onclick="printResume()" style="background-color:blue;">Print Resume</button>
+
+    <script>
+        let p = localStorage.getItem("details")
+        let a = JSON.parse(p)
+        console.log(a)
+
+        document.getElementById("mobile").textContent = a[0].mobile
+        document.getElementById("email").textContent = a[0].mail
+        document.getElementById("city").textContent = a[0].city
+        document.getElementById("linked").textContent = a[0].link
+        document.getElementById("git").textContent = a[0].git
+
+        document.getElementById("name").textContent = a[0].name
+        document.getElementById("role").textContent = a[0].jobrole
+
+        document.getElementById("career").textContent = a[0].career
+
+        document.getElementById("college").textContent = a[1].collegename
+        document.getElementById("degree").textContent = a[1].degree
+        document.getElementById("collegeyear").textContent = a[1].collegeyear
+        document.getElementById("collegepercent").textContent = a[1].collegepercent
+        document.getElementById("college").textContent = a[1].collegename
+        document.getElementById("college").textContent = a[1].collegename
+
+        document.getElementById("schoolname").textContent = a[1].schoolname
+        document.getElementById("schoolyear").textContent = a[1].schoolyear
+        document.getElementById("schoolpercent").textContent = a[1].schoolPercent
+
+        document.getElementById("inttitle").textContent = a[2].interntitle
+        document.getElementById("intyear").textContent = a[2].internyear
+
+        document.getElementById("project").textContent = a[2].projecttitle
+        document.getElementById("projectyr").textContent = a[2].projectyear
+
+        document.getElementById("skill1").textContent = a[5].skills
+        document.getElementById("skill2").textContent = a[5].skills2
+
+        document.getElementById("work").textContent = a[3].companyname
+        document.getElementById("exp").textContent = a[3].experienceyear
+
+        document.getElementById("certname").textContent = a[4].certificatename
+        document.getElementById("certyear").textContent = a[4].certifiedyear
+        document.getElementById("orgname").textContent = a[4].orgname
+
+        document.getElementById("lng1").textContent = a[6].language1
+        document.getElementById("lng2").textContent = a[6].language2
+
+
+        function printResume() {
+            print();
+        }
+
+    </script>
+
+</body>
+
+</html>
